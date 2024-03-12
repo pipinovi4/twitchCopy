@@ -1,0 +1,69 @@
+$font-stack: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$primary-color: #333;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+};
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-stack;
+  color: $primary-color;
+};
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+};
+
+p {
+  margin: 0 0 1em 0;
+};
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+};
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  };
+};
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+};
+
+@mixin for-mobile {
+  @media (max-width: 767px) {
+    @content;
+  };
+};
+
+@mixin for-tablet {
+  @media (min-width: 768px) and (max-width: 1024px) {
+    @content;
+  };
+};
+
+@mixin for-desktop {
+  @media (min-width: 1025px) {
+    @content;
+  };
+};

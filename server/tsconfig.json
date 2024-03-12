@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "outDir": "../dist",
+    "moduleResolution": "node",
+    "allowJs": true,
+    "alwaysStrict": true,
+    "noImplicitAny": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "target": "ES2022",
+    "module": "commonjs"
+  },
+  "exclude": ["node_modules", "**/*.spec.ts", "out/**"],
+  "include": ["**/*.ts"]
+}
