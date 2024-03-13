@@ -3,7 +3,7 @@ import https, {Server} from "https";
 import express, { Application, Response, Request } from "express";
 import cookieParser from "cookie-parser";
 import cors from "cors";
-import errorMiddleware from "../src/middlewares/error-middleware";
+import errorMiddleware from "../middlewares/error-middleware";
 import morgan from 'morgan'
 import helmet from "helmet";
 import rateLimit from "express-rate-limit";

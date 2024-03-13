@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "../dist",
+    "outDir": "./dist",
     "moduleResolution": "node",
     "allowJs": true,
     "alwaysStrict": true,
