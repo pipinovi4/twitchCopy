@@ -1,8 +1,8 @@
 import express from "express";
 import httpsConfig from "./https-config";
 import middlewaresConfig from "./middlewares-config";
-import appRoutes from "./routes-config/app-routes";
-import validateConfig from './config-validation';
+import appRoutes from "./routes/index-routes";
+import validateConfig from "./config-validation";
 
 export default () => {
     validateConfig();
@@ -12,4 +12,4 @@ export default () => {
     httpsConfig(app);
     middlewaresConfig(app);
     appRoutes(app);
-}
+};

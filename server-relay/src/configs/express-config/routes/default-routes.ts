@@ -1,5 +1,5 @@
 import Router, { Response } from "express";
-const router = Router()
+const router = Router();
 
 export default () => {
     router.get('/', (_, res) => {

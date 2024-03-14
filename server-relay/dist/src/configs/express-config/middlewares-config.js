@@ -24,8 +24,8 @@ exports.default = (app) => {
         credentials: true,
     }));
     app.use((0, cookie_parser_1.default)());
-    app.use(express_1.default.json({ limit: '3mb', strict: true }));
-    app.use(express_1.default.urlencoded({ extended: true, limit: '3mb' }));
+    app.use(express_1.default.json({ limit: "3mb", strict: true }));
+    app.use(express_1.default.urlencoded({ extended: true, limit: "3mb" }));
     app.use(express_1.default.static("public", {
         maxAge: "1d",
         etag: false,

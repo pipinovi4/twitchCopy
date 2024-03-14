@@ -5,10 +5,11 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const joi_1 = __importDefault(require("joi"));
 const schemaConfig = joi_1.default.object({
+    PORT: joi_1.default.number().integer().min(1).max(65535).required(),
     PATH_TO_CERT: joi_1.default.string().required(),
     PATH_TO_KEY: joi_1.default.string().required(),
-    PORT: joi_1.default.number().integer().min(1).max(65535).required(),
-});
+    MONGODB_URI: joi_1.default.string().required(),
+}).unknown(true);
 exports.default = () => {
     const { error } = schemaConfig.validate(process.env);
     if (error) {

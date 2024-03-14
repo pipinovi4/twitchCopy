@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const https_config_1 = __importDefault(require("./https-config"));
 const middlewares_config_1 = __importDefault(require("./middlewares-config"));
-const index_routes_1 = __importDefault(require("./routes-config/index-routes"));
+const index_routes_1 = __importDefault(require("./routes/index-routes"));
 const config_validation_1 = __importDefault(require("./config-validation"));
 exports.default = () => {
     (0, config_validation_1.default)();

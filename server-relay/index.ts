@@ -1,10 +1,10 @@
-import expressConfig from './src/configs/express-config';
-import mongodbConfig from './src/configs/mongodb-config';
-import ApiError from "./src/exceptions/ApiError";
+require("dotenv").config();
+import expressConfig from "./src/configs/express-config/index-express";
+import mongodbConfig from "./src/configs/mongodb-config";
 
-async function startServer() {
+function startServer() {
     expressConfig();
-    await mongodbConfig();
+    mongodbConfig();
 }
 
-startServer().then(r => console.log("Server fully launched")).catch((error) => new ApiError(500, 'Unforeseen error', error));
+startServer();

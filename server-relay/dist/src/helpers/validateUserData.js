@@ -9,10 +9,10 @@ const validateUserData = (personalInformation, password, req) => {
     const errors = (0, express_validator_1.validationResult)(req);
     const validationError = errors.array().map(error => new Error(error.msg));
     if (!personalInformation || !password) {
-        throw ApiError_1.default.BadRequest('Personal information and password required');
+        throw ApiError_1.default.BadRequest("Personal information and password required");
     }
     if (!errors.isEmpty()) {
-        throw ApiError_1.default.BadRequest('Error on validation', validationError);
+        throw ApiError_1.default.BadRequest("Error on validation", validationError);
     }
 };
 exports.default = validateUserData;
